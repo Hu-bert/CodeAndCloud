@@ -7,6 +7,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Azure; // Namespace for CloudConfigurationManager
+using Microsoft.Azure.Storage; // Namespace for StorageAccounts
+using Microsoft.Azure.CosmosDB.Table; // Namespace for Table storage types
 
 namespace CodeAndCloud.Web
 {
