@@ -1,10 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-<h2>@ViewData["Title"]</h2>
+
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
+        <h2>@ViewData["Title"]</h2>
         <h3>@ViewData["Message"]</h3>
         <form method="POST" asp-controller="Home" asp-action="Contact">
             <div class="form-group">
@@ -17,7 +18,7 @@
             </div>
             <div class="form-group">
                 <label for="Phone">Phone number</label>
-                <input type="number" class="form-control" id="Phone" name="PhoneNumber" placeholder="123456789">
+                <input type="text" class="form-control" id="Phone" name="PhoneNumber" placeholder="123456789">
             </div>
             <button type="submit" class="btn btn-sm btn-success">Zapisz</button>
         </form>
