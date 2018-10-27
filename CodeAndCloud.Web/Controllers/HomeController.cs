@@ -7,8 +7,7 @@ using CodeAndCloud.Services.ContactServices;
 using CodeAndCloud.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure; // Namespace for CloudConfigurationManager
-using Microsoft.Azure.Storage; // Namespace for StorageAccounts
-using Microsoft.Azure.CosmosDB.Table; // Namespace for Table storage types
+
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
 
@@ -34,7 +33,7 @@ namespace CodeAndCloud.Web.Controllers
             return View();
         }
 
-        public IActionResult ContactAsync()
+        public IActionResult Contact()
         {
             ViewData["Message"] = "Leave contact to yourself";
 
@@ -63,7 +62,7 @@ namespace CodeAndCloud.Web.Controllers
             await queue.AddMessageAsync(message);
 
             _service.AddAsync(model);
-            return View();
+            return View("Contact");
         }
 
         public IActionResult Privacy()
