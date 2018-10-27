@@ -9,7 +9,7 @@ namespace CodeAndCloud.Services.ContactServices
 {
     public class ContactService : IContactService
     {
-        public new void Add(AddContactViewModel model)
+        public void Add(AddContactViewModel model)
         {
             var db = new DataContext();
 
