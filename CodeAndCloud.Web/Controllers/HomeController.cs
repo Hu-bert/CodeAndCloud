@@ -34,7 +34,7 @@ namespace CodeAndCloud.Web.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult ContactAsync()
         {
             ViewData["Message"] = "Leave contact to yourself";
 
