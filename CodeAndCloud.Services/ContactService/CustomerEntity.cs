@@ -7,10 +7,11 @@ namespace CodeAndCloud.Services.ContactService
 {
     public class CustomerEntity : TableEntity
     {
-        public CustomerEntity(string lastName)
+        public CustomerEntity(string fullname)
         {
-            this.PartitionKey = lastName;
-            this.RowKey = lastName;
+            string[] name = fullname.Split(new char[] { ' ' });
+            this.PartitionKey = name[0];
+            this.RowKey = name[1];
         }
 
         public CustomerEntity() { }
