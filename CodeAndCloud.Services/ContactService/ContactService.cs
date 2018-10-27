@@ -14,7 +14,7 @@ namespace CodeAndCloud.Services.ContactServices
 {
     public class ContactService : IContactService
     {
-        public void Add(AddContactViewModel model)
+        public void AddAsync(AddContactViewModel model)
         {
             var db = new DataContext();
 
@@ -28,7 +28,7 @@ namespace CodeAndCloud.Services.ContactServices
 
             db.Add<ContactModel>(contact);
             db.SaveChanges();
-           
+            
         }
     }
 }

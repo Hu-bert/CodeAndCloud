@@ -9,6 +9,6 @@ namespace CodeAndCloud.Services.ContactServices
 {
     public interface IContactService
     {
-        void Add(AddContactViewModel model);
+        void AddAsync(AddContactViewModel model);
     }
 }
