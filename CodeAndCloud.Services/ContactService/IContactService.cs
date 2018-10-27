@@ -11,3 +11,4 @@ namespace CodeAndCloud.Services.ContactServices
     {
         void Add(AddContactViewModel model);
     }
+}
